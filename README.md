@@ -7,7 +7,7 @@
 * 专注于Java后端以及Spring框架的学习（Spring + Spring Boot）
 * 对MVC机制有更多的了解
 * 参考书籍:  
-  ~~《Spring in Action 4th Edition》~~ 理论部分看不懂，先弃
+  ~~《Spring in Action 4th Edition》~~ 理论部分看不懂，先弃  
   《JavaEE开发的颠覆者 Spring Boot实战》
 
 ## 0x02
