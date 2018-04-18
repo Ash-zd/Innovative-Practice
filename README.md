@@ -7,7 +7,7 @@
 * 专注于Java后端以及Spring框架的学习（Spring + Spring Boot）
 * 对MVC机制有更多的了解
 * 参考书籍:  
-  《Spring in Action 4th Edition》  
+  ~~《Spring in Action 4th Edition》~~ 理论部分看不懂，先弃
   《JavaEE开发的颠覆者 Spring Boot实战》
 
 ## 0x02
@@ -28,7 +28,7 @@
 ## 0x04
 * 接触一下DevOps，使用Docker搭建各容器互联
 * 参考书籍:  
-  《Docker技术入门与实战 第2版》  
+  ~~《Docker技术入门与实战 第2版》~~ 基础部分看完了  
   《DevOps实践》
 
 
@@ -36,11 +36,11 @@
 ### 1.使用Spring框架完整地搭起一套个人博客系统
 * 技术栈  
 
-  后端：`Spring` + `Mysql` + `RESTful API`  
+  后端：`Spring` + `MySQL` + `RESTful API`  
   部署：`Tomcat`  
   运维：`Docker`  
 
-* 个人对前端有点掌控不了，大概会去找个H5模板修改一下套来用
+* ~~个人对前端有点掌控不了，大概会去找个H5模板修改一下套来用~~  不写前端，纯web server
 ---
 ### 2.使用Java造轮子实现一个简易的HTTP Server
 * ~~目前没有什么太多想法，还是要先去看《深入剖析Tomcat》这本书之后再来决定~~
