@@ -1,17 +1,25 @@
 package com.ashzd.blog.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class User {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    private int id;
     private String name;
+    private String password;
     private String email;
+
+    private String salt;
+    private String headUrl;
+    private String role;
+
+    public User(){}
+
+    public User(String name) {
+        this.name = name;
+        this.password = "";
+        this.email = "";
+        this.salt = "";
+        this.headUrl = "";
+        this.role = "user";
+    }
 
     public Integer getId() {
         return id;
@@ -35,5 +43,36 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getHeadUrl() {
+        return headUrl;
+    }
+
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
