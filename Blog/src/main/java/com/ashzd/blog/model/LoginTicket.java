@@ -1,5 +1,9 @@
 package com.ashzd.blog.model;
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
+
+@Component
 public class LoginTicket {
     private int id;
     private int userId;

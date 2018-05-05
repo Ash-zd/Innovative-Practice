@@ -1,10 +1,9 @@
 package com.ashzd.blog.util;
 import java.security.MessageDigest;
-import java.util.HashMap;
-import java.util.Map;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 public class BlogUtil {
     private static final Logger logger = LoggerFactory.getLogger(BlogUtil.class);
     public static String getJSONString(int code,String msg){
@@ -20,9 +19,7 @@ public class BlogUtil {
         return json.toJSONString();
     }
     public static String MD5(String key) {
-        char hexDigits[] = {
-                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
-        };
+        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         try {
             byte[] btInput = key.getBytes();
             // 获得MD5摘要算法的 MessageDigest 对象
