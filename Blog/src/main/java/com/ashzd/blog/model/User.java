@@ -1,34 +1,28 @@
 package com.ashzd.blog.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class User {
     private int id;
     private String name;
     private String password;
-    private String email;
-
     private String salt;
     private String headUrl;
     private String role;
 
     public User(){}
 
-    public User(String name) {
+    public User(String name){
         this.name = name;
         this.password = "";
-        this.email = "";
         this.salt = "";
         this.headUrl = "";
         this.role = "user";
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -38,22 +32,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getHeadUrl() {
-        return headUrl;
-    }
-
-    public void setHeadUrl(String headUrl) {
-        this.headUrl = headUrl;
     }
 
     public String getPassword() {
@@ -67,8 +45,17 @@ public class User {
     public String getSalt() {
         return salt;
     }
+
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public String getHeadUrl() {
+        return headUrl;
+    }
+
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl;
     }
 
     public String getRole() {

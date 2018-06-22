@@ -1,11 +1,30 @@
 package com.ashzd.blog.util;
-import java.security.MessageDigest;
 import com.alibaba.fastjson.JSONObject;
+import com.vladsch.flexmark.ast.Node;
+import com.vladsch.flexmark.html.HtmlRenderer;
+import com.vladsch.flexmark.parser.Parser;
+import com.vladsch.flexmark.util.options.MutableDataSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.security.MessageDigest;
+import java.util.HashMap;
+import java.util.Map;
+
 public class BlogUtil {
+    public static Map<String,String> categoryMap;
+    static {
+        categoryMap = new HashMap<>();
+        categoryMap.put("Java","Java");
+        categoryMap.put("Web","Web");
+        categoryMap.put("Linux","Linux");
+        categoryMap.put("其它","Other");
+    }
     private static final Logger logger = LoggerFactory.getLogger(BlogUtil.class);
+
+    public static String[] categorys = {"Java","Web","Linux","其它"};
+    public static int ANONYMOUS_USER_ID = 3;
+
     public static String getJSONString(int code,String msg){
         JSONObject json = new JSONObject();
         json.put("code",code);
@@ -18,8 +37,11 @@ public class BlogUtil {
         json.put("code",code);
         return json.toJSONString();
     }
+
     public static String MD5(String key) {
-        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+        char hexDigits[] = {
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
+        };
         try {
             byte[] btInput = key.getBytes();
             // 获得MD5摘要算法的 MessageDigest 对象
@@ -42,5 +64,13 @@ public class BlogUtil {
             logger.error("生成MD5失败", e);
             return null;
         }
+    }
+
+    public static String tranfer(String content){
+        MutableDataSet options = new MutableDataSet();
+        Parser parser = Parser.builder(options).build();
+        HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+        Node document = parser.parse(content);
+        return renderer.render(document);
     }
 }

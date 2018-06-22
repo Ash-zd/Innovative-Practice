@@ -1,0 +1,38 @@
+GET http://localhost:80/in
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-19T092157.200.html
+
+###
+
+GET http://localhost:80/in
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-19T092149.200.html
+
+###
+
+GET http://localhost:80
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-19T092136.200.html
+
+###
+
+GET http://localhost:80/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-19T092129.404.json
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+

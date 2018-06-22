@@ -1,9 +1,7 @@
 package com.ashzd.blog.model;
-import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
 public class LoginTicket {
     private int id;
     private int userId;
@@ -39,12 +37,12 @@ public class LoginTicket {
         return status;
     }
 
-    public String getTicket() {
-        return ticket;
-    }
-
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String getTicket() {
+        return ticket;
     }
 
     public void setTicket(String ticket) {
