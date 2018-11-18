@@ -12,7 +12,7 @@
 ## 0x02 需要学习的内容  
 * 基础：`Java`基础知识体系 + `Java JDK`常用集合函数源码实现分析   
 * 后端：`Spring Boot 2.x`新特性 + `Java JDK8-11`新特性 + `Spring Cloud`初步认知  
-* 运维: `Travis CI` + `Docker`  
+* 运维：`Travis CI` + `Docker`  
 
 ## 0x03 未完待续...
 pass
